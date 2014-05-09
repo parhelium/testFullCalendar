@@ -1,0 +1,91 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "bootstrap3-datetimepicker": {},
+      "moment": {},
+      "roles": {},
+      "iron-router": {},
+      "bootstrap-3": {},
+      "accounts-ui-bootstrap-3": {},
+      "inspector": {},
+      "bootstrap-errors": {},
+      "pretty-checkable": {},
+      "bootstrap-growl": {},
+      "fast-render": {},
+      "pretty-fullcalendar": {}
+    },
+    "packages": {
+      "bootstrap3-datetimepicker": {
+        "git": "https://github.com/tsega/meteor-bootstrap3-datetimepicker.git",
+        "tag": "v0.0.5",
+        "commit": "30b5fa0759f98b75761772ad891876408f7cc8c4"
+      },
+      "moment": {
+        "git": "https://github.com/acreeger/meteor-moment.git",
+        "tag": "v2.6.0",
+        "commit": "26156df681750fd6e6ed77043eef32b6653ebbdf"
+      },
+      "roles": {
+        "git": "https://github.com/alanning/meteor-roles.git",
+        "tag": "v1.2.8",
+        "commit": "68844ba216c348d332bdb840825850f497f515bb"
+      },
+      "iron-router": {
+        "git": "https://github.com/EventedMind/iron-router.git",
+        "tag": "v0.7.1",
+        "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
+      },
+      "bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
+        "tag": "v3.1.1-1",
+        "commit": "63dd38968828bb8963636df93e9a1c45e2dfe67e"
+      },
+      "accounts-ui-bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3.git",
+        "tag": "v0.3.0-1",
+        "commit": "93ffa5d0e325dc7026de89f6d90c178fa04bdd3a"
+      },
+      "inspector": {
+        "git": "https://github.com/broth-eu/meteor-inspector.git",
+        "tag": "v0.2.2",
+        "commit": "d3e5e4a760133f8d97b6457befc6e8ea1b42a010"
+      },
+      "bootstrap-errors": {
+        "git": "https://github.com/lezed1/meteor-bootstrap-errors.git",
+        "tag": "v0.3.1",
+        "commit": "f85d792683a423bfb6747460d4516b7404871260"
+      },
+      "pretty-checkable": {
+        "git": "https://github.com/TimHeckel/meteor-pretty-checkable.git",
+        "tag": "v0.0.2",
+        "commit": "183a5f313bfcb3f02cbfb517d56faa46f89f8872"
+      },
+      "bootstrap-growl": {
+        "git": "https://github.com/TimHeckel/meteor-bootstrap-growl.git",
+        "tag": "v0.1.1",
+        "commit": "674fd231a46e405f8d4eb463725d8003a02374ec"
+      },
+      "fast-render": {
+        "git": "https://github.com/arunoda/meteor-fast-render.git",
+        "tag": "v0.2.5",
+        "commit": "93e2fb334e55fbe9b5ebb2a2e65964018658f43e"
+      },
+      "pretty-fullcalendar": {
+        "git": "https://github.com/priyadarshy/meteor-fullcalendar.git",
+        "tag": "v1.7.1",
+        "commit": "075770e4fbe7367d79505169765c29c5c8b26aaf"
+      },
+      "blaze-layout": {
+        "git": "https://github.com/EventedMind/blaze-layout.git",
+        "tag": "v0.2.4",
+        "commit": "b40e9b0612329288d75cf52ad14a7da64bb8618f"
+      },
+      "jquery-ui": {
+        "git": "https://github.com/TimHeckel/meteor-jquery-ui.git",
+        "tag": "v1.9.2",
+        "commit": "c437d45edcf1367df8d5ffa8bad2867758030bd2"
+      }
+    }
+  }
+}
