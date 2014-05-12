@@ -33,7 +33,7 @@ Template.packLayout.rendered = function(){
     },
     events: function(start, end, callback) {
       var events = [];
-      reqEvents = Requests.find();
+      reqEvents = Requests.find({},{reactive:false});
       reqEvents.forEach(function(evt){
         event = {id:evt._id,title:evt.title,start:evt.start,end:evt.end,color:evt.color};
         events.push(event);
@@ -48,12 +48,14 @@ Template.packLayout.rendered = function(){
 
 Template.packLayout.helpers ({
   data: function() {
+    var timeoutId;
     allReqsCursor = Requests.find();
 
     var handle = allReqsCursor.observeChanges({
       added: function (id, fields) {
         console.log("Request added");
-        calendar.refetchEvents();
+        clearTimeout(timeoutId);
+        setTimeout(function(){calendar.refetchEvents();},0)
       }, // Use either added() OR(!) addedBefore()
       // addedBefore: function (id, fields, before) {
       //   console.log("Request addedBefore");
