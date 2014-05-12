@@ -44,42 +44,16 @@ Template.packLayout.rendered = function(){
     weekMode: 'liquid',
   }).data().fullCalendar;
   window.c = calendar;
+  Deps.autorun(function(){
+    
+    allReqsCursor = Requests.find().fetch();
+    console.log("Autorun -> ", allReqsCursor.length)
+    if(calendar)
+        calendar.refetchEvents();
+  })
 };
 
-Template.packLayout.helpers ({
-  data: function() {
-    var timeoutId;
-    allReqsCursor = Requests.find();
 
-    var handle = allReqsCursor.observeChanges({
-      added: function (id, fields) {
-        console.log("Request added");
-        clearTimeout(timeoutId);
-        setTimeout(function(){calendar.refetchEvents();},0)
-      }, // Use either added() OR(!) addedBefore()
-      // addedBefore: function (id, fields, before) {
-      //   console.log("Request addedBefore");
-      // },
-      changed: function (id, fields) {
-        console.log("id: " +id);
-        console.log(fields);
-        if(calendar) {
-          //console.log(calendar);
-          //calendar.fullCalendar('today');
-          //calendar.fullCalendar('rerenderEvents');
-          //calendar.fullCalendar('refresh');
-        }
-      },
-      // movedBefore: function (id, fields) {
-      //   console.log("Request movedBefore");
-      // },
-      removed: function (id) {
-        console.log("Request removed");
-      }
-    });
-    return allReqsCursor;
-  }
-});
 
 Template.packLayout.showEditEvent = function(){
   return Session.get('showEditEvent');
