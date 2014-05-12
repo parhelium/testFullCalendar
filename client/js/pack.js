@@ -53,6 +53,7 @@ Template.packLayout.helpers ({
     var handle = allReqsCursor.observeChanges({
       added: function (id, fields) {
         console.log("Request added");
+        calendar.refetchEvents();
       }, // Use either added() OR(!) addedBefore()
       // addedBefore: function (id, fields, before) {
       //   console.log("Request addedBefore");
