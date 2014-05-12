@@ -17,6 +17,7 @@ var calendar = null;
 // });
 
 Template.packLayout.rendered = function(){
+
   calendar = $('#calendar').fullCalendar({
     dayClick:function( date, allDay, jsEvent, view ) {
       Requests.insert({title:'Request',start:date,end:date,color:'red',className:'todo'});
@@ -41,7 +42,8 @@ Template.packLayout.rendered = function(){
     },
     editable:true,
     weekMode: 'liquid',
-  });
+  }).data().fullCalendar;
+  window.c = calendar;
 };
 
 Template.packLayout.helpers ({
